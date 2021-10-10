@@ -1,0 +1,8 @@
+org/example/primenumbers/NumberIsPrime.class
+org/example/primenumbers/PrimeCalculator.class
+org/example/primenumbers/NumberIsSymbol.class
+org/example/primenumbers/Main.class
+org/example/primenumbers/NumberIsNotPrime.class
+org/example/primenumbers/NumberIsFloat.class
+org/example/primenumbers/NumberOutOfBound.class
+org/example/primenumbers/Checker.class
