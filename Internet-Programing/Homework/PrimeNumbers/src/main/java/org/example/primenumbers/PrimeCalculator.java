@@ -18,7 +18,7 @@ public class PrimeCalculator {
                 BigInteger b_min = new BigInteger(String.valueOf(Integer.MIN_VALUE));
                 if (number.compareTo(b_max) > 0 || number.compareTo(b_min) < 0){
                     new NumberOutOfBound().execute(symbol);
-                }else if (number.isProbablePrime(1)){
+                }else if (number.isProbablePrime(1) && number.compareTo(BigInteger.valueOf(1)) > 0){
                     new NumberIsPrime().execute(symbol);
                 }else {
                     new NumberIsNotPrime().execute(symbol);
