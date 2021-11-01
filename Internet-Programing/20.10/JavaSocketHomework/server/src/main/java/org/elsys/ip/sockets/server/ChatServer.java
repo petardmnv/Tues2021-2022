@@ -6,9 +6,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ChatServer {
     private ServerSocket serverSocket;
@@ -27,7 +32,6 @@ public class ChatServer {
         private PrintWriter out;
         private BufferedReader in;
         private final ChatServer server;
-        private String name;
 
         public CalculatorClientHandler(Socket socket, ChatServer server) {
             this.clientSocket = socket;
@@ -38,13 +42,49 @@ public class ChatServer {
             try {
                 out = new PrintWriter(clientSocket.getOutputStream(), true);
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
-                name = in.readLine();
                 while (true) {
                     String line = in.readLine();
                     String lineToLower = line.toLowerCase();
-                    if (line == null || (lineToLower.equals("quit") || lineToLower.equals("exit"))) {
-                        break;
+                    if ((lineToLower.equals("quit") || lineToLower.equals("exit"))) {
+                        clientSocket.close();
+                        dispose();
+                    }
+                    if (lineToLower.equals("time")){
+                        String zone = in.readLine();
+                        LocalTime time = LocalTime.now(ZoneId.of(zone));
+                        String t = time.format(DateTimeFormatter.ofPattern("HH:mm"));
+                        out.println(t);
+                    }else if(!lineToLower.substring(0,4).equals("time")){
+                        out.println("invalid input");
+                    }else if((lineToLower.split(" ")[1].length() == 6)) {
+                        String[] arguments = lineToLower.split(" ");
+                        // Regex:
+                        // (([+](0[0-9]|1[0-4])|[-](0[0-9]|1[0-2])):[0][0])
+                        String regex = "(([+](0[0-9]|1[0-4])|[-](0[0-9]|1[0-2])):[0][0])";
+                        Pattern p = Pattern.compile(regex);
+                        Matcher m = p.matcher(arguments[1]);
+                        if (m.matches()) {
+                            //Do logic
+                            String timeOffset = arguments[1];
+                            String stringHour = timeOffset.substring(1,3);
+                            int hour = Integer.parseInt(stringHour);
+                            if (timeOffset.charAt(0) == '+') {
+                                LocalTime time = LocalTime.now(ZoneOffset.ofHours(hour));
+                                String t = time.format(DateTimeFormatter.ofPattern("HH:mm"));
+                                out.println(t);
+                            } else {
+                                hour *= -1;
+                                LocalTime time = LocalTime.now(ZoneOffset.ofHours(hour));
+                                String t = time.format(DateTimeFormatter.ofPattern("HH:mm"));
+                                out.println(t);
+                            }
+                        } else {
+                            //quit invalid args
+                            out.println("invalid time zone");
+                        }
+                    }
+                    else{
+                        out.println("invalid input");
                     }
                 }
             } catch (Throwable t) {

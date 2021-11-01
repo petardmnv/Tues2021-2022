@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.time.ZoneId;
 import java.util.Scanner;
+import java.util.TimeZone;
 
 public class ChatClient {
     private Socket clientSocket;
@@ -21,8 +23,9 @@ public class ChatClient {
             try {
                 while (true) {
                     String line = in.readLine();
+
                     if (line == null) {
-                        System.out.println("<<<<<< Connection Closed >>>>>>");
+                        System.out.println("server disconnect");
                         System.exit(0);
                     }
                     System.out.println(line);
@@ -36,6 +39,9 @@ public class ChatClient {
 
     public void sendMessage(String msg) {
         out.println(msg);
+        if(msg.equalsIgnoreCase("time")) {
+            out.println(ZoneId.systemDefault().getId());
+        }
     }
 
     public void stopConnection() throws IOException {
@@ -52,7 +58,7 @@ public class ChatClient {
             System.err.println("invalid arguments");
             System.exit(1);
         }
-        String separatedArguments[] = new String[0];
+        String[] separatedArguments = new String[0];
         try {
             separatedArguments = args[0].split(":");
         } catch (Exception e) {

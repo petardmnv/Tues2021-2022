@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1415a889-c7f6-472e-a466-c68f75eb2e1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/org/elsys/ip/sockets/client/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/elsys/ip/sockets/server/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Calculator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/java/org/apache/myfaces/blank/HelloWorldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/java/org/elsys/ip/Calcilator/AddCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/java/org/elsys/ip/Calcilator/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/java/org/elsys/ip/Calcilator/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/helloWorld.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../src/main/webapp/page2.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/org/elsys/ip/sockets/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/org/elsys/ip/sockets/client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/elsys/ip/sockets/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/elsys/ip/sockets/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/hello_site/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/hello_site/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/hello_site/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/hello_site/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/hello_site/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SoftwareEngineering/hello_site/manage.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -60,6 +61,7 @@
     <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.elsys.ip.sockets.client.ChatClient" />
       <module name="client" />
+      <option name="PROGRAM_PARAMETERS" value="localhost:2332" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.elsys.ip.sockets.client.*" />
@@ -73,6 +75,7 @@
     <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.elsys.ip.sockets.server.ChatServer" />
       <module name="server" />
+      <option name="PROGRAM_PARAMETERS" value="localhost:2332" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.elsys.ip.sockets.server.*" />
@@ -83,6 +86,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ChatClient" />
+      <item itemvalue="Application.ChatServer" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ChatClient" />
