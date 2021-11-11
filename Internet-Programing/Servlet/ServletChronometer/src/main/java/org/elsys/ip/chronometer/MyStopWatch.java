@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StopWatch {
+public class MyStopWatch {
     private Map<String, Map<String, String>> timestamps = new HashMap<>();
     private Map<String, Integer> startTimes = new HashMap<>();
     private Map<String, Integer> timeLaps = new HashMap<>();
@@ -42,7 +42,7 @@ public class StopWatch {
             map.put(getBeautifulTime(diff), getBeautifulTime(diff));
         }else {
             int newLapTime = getCurrentTime();
-            int lapTimeDiff =newLapTime - timeLaps.get(id);
+            int lapTimeDiff = newLapTime - timeLaps.get(id);
             map.put(getBeautifulTime(lapTimeDiff), getBeautifulTime(newLapTime));
         }
         timestamps.put(id, map);
