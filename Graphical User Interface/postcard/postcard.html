@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <title>Hello from...</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="postcard.css"/>
+    <style>
+        .post-card {
+            background-color: transparent;
+            width: 600px;
+            height: 900px;
+            perspective: 1000px;
+        }
+
+        .post-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .post-card-front, .post-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+        }
+
+        .post-card-front {
+            background: #fbf1da;
+            background: radial-gradient(circle, #fbf1daFF 40%, rgba(138, 205, 234, 1) 100%);
+            color: black;
+        }
+
+        .post-card-back {
+            background-color: #f9efe7;
+            color: black;
+            transform: rotateY(180deg);
+            z-index: 2;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        input[type=checkbox] + label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        input[type=checkbox] + label i {
+            font-size: 36px;
+        }
+
+        input[type=checkbox] + label .fa-redo {
+            display: block;
+        }
+
+        input[type=checkbox] + label .fa-undo {
+            display: none;
+        }
+
+        input[type=checkbox] + label {
+            color: black;
+        }
+
+        input[type=checkbox]:checked + label .fa-undo {
+            display: block;
+        }
+
+        input[type=checkbox]:checked + label .fa-redo {
+            display: none;
+        }
+
+        input[type=checkbox]:checked + label + .post-card-inner {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="post-card">
+    <!--  ако работите по задната страна, добавете параметър checked, за да не трябва всеки път да обръщате картичката за да видите промените  -->
+    <input type="checkbox" id="flipSwitch" value="Flip">
+    <label for="flipSwitch">
+        <i class="fas fa-undo"></i>
+        <i class="fas fa-redo"></i>
+    </label>
+    <div class="post-card-inner">
+        <div class="post-card-front">
+            <!--    Лицева Страна    -->
+            <div class="face">
+                <div class="face-text"><p> Greetings from <br> New York!</p></div>
+                <img src="img_1.png">
+            </div>
+
+        </div>
+
+        <div class="post-card-back">
+            <!--     Задна страна     -->
+            <div class="back">
+                <div class="stamp">
+                    <p id="place_stamp"> Place <br> stamp <br> here</p>
+                    <img src="img.png" height="200px" width="150px"/>
+                </div>
+
+                <div class="lines">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <div class="to-from">
+                    <div style="width: 130px">
+                        <p> To: </p>
+                        <hr>
+                    </div>
+
+                    <div style="width: 130px">
+                        <p> From: </p>
+                        <hr>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
