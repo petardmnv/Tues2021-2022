@@ -1,0 +1,66 @@
+/* ==UserStyle== 
+@name         Google Translate Dark Theme
+@description  Dark Theme with orange and back backgroung
+@author       Petar Damyanov
+@version      0.0.1
+@license      MIT
+@preprocessor stylus
+==/UserStyle== */
+@-moz-document domain("translate.google.com") {
+  header,
+  .frame,
+  .container,
+  .tlid-language-bar,
+  .swap-wrap,
+  .swap.jfk-button,
+  .language-list-search-box,
+  .language_list_search_box_container input,
+  .input-button-container,
+  .language-list,
+  .language_list_languages,
+  .language_list_section,
+  .language_list_item_wrapper,
+  .select-file-page,
+  .language-list-toolbar,
+  .orig,
+  #spelling-correction,
+  #input-wrap,
+  .source-wrap,
+  .results-container,
+  .result {
+      background-color: black !important;
+  }
+
+  .gb_Uc .gb_Wd,
+  .gb_Kc .gb_Wd {
+      color: white;
+  }
+  .OlSOob {
+      filter: invert(100) !important;
+  }
+  .yDmH0d,
+  .yDmH0d,
+  .RvYhPd,
+  .WFnNle {
+      background-color: black!important;
+  }
+  .cWQYBc,
+  .TYVfy,
+  .gb_na svg,
+  .gb_yc svg,
+  .gb_Wd gb_Tc,
+  .TcXXXb,
+  .gb_Wd,
+  .gb_Tc{
+      color: rgb(221, 131, 29)!important;
+  }
+  .ySES5 {
+      background-color: rgb(55, 55, 54)!important;
+  }
+  .VIiyi {
+      color: rgb(41, 130, 215);
+  }
+  .VfPpkd-vQzf8d {
+      color: rgb(149, 147, 147);
+  }   
+}
